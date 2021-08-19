@@ -1,0 +1,26 @@
+syntax = "proto3";
+package proto;
+
+import "common.proto"
+import "book.proto"
+
+service BookBuy {
+    rpc QueryAll(MessageHead) returns (MessageQueryAllResponse) {}
+    rpc QueryOne(MessageQueryOneRequest) returns (MessageQueryOneResponse) {}
+    rpc Buy() returns (MessageBuyRequst) returns (MessageResponse) {}
+}
+
+message MessageQueryOneRequest {
+    MessageHead Head = 1;
+    string BookName = 2;
+}
+
+message MessageQueryOneResponse {
+    MessageHead Head = 1;
+    MsgBook Books = 2;
+}
+
+message MessageBuyRequest {
+    MessageHead Head = 1;
+    string BookName = 2;
+}

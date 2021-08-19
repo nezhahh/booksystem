@@ -1,0 +1,16 @@
+syntax = "proto3";
+package proto;
+
+message MessageHead {
+    int32 Id = 1;
+    string ErrMsg = 2;
+}
+
+message MessageResponse {
+    MessageHead Head = 1;
+}
+
+message MessageQueryAllResponse {
+    MessageHead Head = 1;
+    repeated MsgBook Books = 2;
+}

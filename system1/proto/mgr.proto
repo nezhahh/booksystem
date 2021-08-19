@@ -1,0 +1,21 @@
+syntax = "proto3";
+package proto;
+
+import "common.proto"
+import "book.proto"
+
+service BookMgr {
+    rpc Query(MessageHead) returns (MessageQueryAllResponse) {}
+    rpc ModifyBook() returns (MessageResponse) {}
+    rpc EnterNew(MessageEnterNewRequest) returns (MessageResponse) {}
+}
+
+message MessageModifyBookRequest {
+    MessageHead Head = 1;
+    MsgBook Book = 2;
+}
+
+message MessageEnterNewRequest {
+    MessageHead Head = 1;
+    Repeated MsgBook Books = 2;
+}
