@@ -17,5 +17,5 @@ message MessageModifyBookRequest {
 
 message MessageEnterNewRequest {
     MessageHead Head = 1;
-    Repeated MsgBook Books = 2;
+    repeated MsgBook Books = 2;
 }

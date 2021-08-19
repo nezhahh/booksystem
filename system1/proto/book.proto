@@ -1,8 +1,15 @@
 syntax = "proto3";
 package proto;
 
+import "common.proto";
+
 message MsgBook {
     string Name = 1;
     int32 Inventory = 2;
     int32 Price = 3;
+}
+
+message MessageQueryAllResponse {
+    MessageHead Head = 1;
+    repeated MsgBook Books = 2;
 }

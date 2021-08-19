@@ -9,8 +9,3 @@ message MessageHead {
 message MessageResponse {
     MessageHead Head = 1;
 }
-
-message MessageQueryAllResponse {
-    MessageHead Head = 1;
-    repeated MsgBook Books = 2;
-}
