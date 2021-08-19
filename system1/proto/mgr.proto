@@ -1,12 +1,12 @@
 syntax = "proto3";
 package proto;
 
-import "common.proto"
-import "book.proto"
+import "common.proto";
+import "book.proto";
 
 service BookMgr {
     rpc Query(MessageHead) returns (MessageQueryAllResponse) {}
-    rpc ModifyBook() returns (MessageResponse) {}
+    rpc ModifyBook(MessageHead) returns (MessageResponse) {}
     rpc EnterNew(MessageEnterNewRequest) returns (MessageResponse) {}
 }
 
