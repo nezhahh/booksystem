@@ -7,7 +7,7 @@ import "book.proto";
 service BookBuy {
     rpc QueryAll(MessageHead) returns (MessageQueryAllResponse) {}
     rpc QueryOne(MessageQueryOneRequest) returns (MessageQueryOneResponse) {}
-    rpc Buy(MessageHead) returns (MessageBuyRequst) returns (MessageResponse) {}
+    rpc Buy(MessageBuyRequst) returns (MessageResponse) {}
 }
 
 message MessageQueryOneRequest {
